@@ -1,0 +1,24 @@
+{
+    "planner": {
+      "defaultInformedHZ": {
+        "type": "InformedHZ",
+        "isAnytime": true,
+        "report": { "color": "pdtblue", "name": "Informed HZ" },
+        "options": {
+          "useKNearest": true,
+          "rewireFactor": 1.1,
+          "goalBias": 0.05,
+          "numSamplingAttempts": 100,
+          "maxEdgeLength": {
+            "2d": 0.1,
+            "3d": 0.1,
+            "4d": 0.1,
+            "5d": 0.1,
+            "6d": 0.1,
+            "7d": 0.1,
+            "8d": 0.1
+          }
+        }
+      }
+    }
+  }

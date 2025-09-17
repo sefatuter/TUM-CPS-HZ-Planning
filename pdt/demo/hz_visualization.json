@@ -1,0 +1,52 @@
+{
+    "experiment": {
+      "executable": "visualization",
+      "planner": "defaultInformedHZ",
+      "context": "RandomRectangles2D",
+      "useOnlyThisConfig": true,
+      "seed": 123456789
+    },
+  
+    "objective": {
+      "defaultPathLength": {
+        "type": "PathLength",
+        "solvedCost": 0.0
+      }
+    },
+  
+    "planner": {
+      "defaultInformedHZ": {
+        "type": "InformedHZ",
+        "options": {
+          "useKNearest": true,
+          "rewireFactor": 1.1,
+          "goalBias": 0.05,
+          "numSamplingAttempts": 200,
+          "maxEdgeLength": {
+            "2d": 0.10
+          },
+          "range": {
+            "2d": 0.20
+          }
+        }
+      }
+    },
+  
+    "context": {
+      "RandomRectangles2D": {
+        "type": "RandomRectangles",
+        "objective": "defaultPathLength",
+        "dimensions": 2,
+        "boundarySideLengths": [1.0, 1.0],
+        "start": [-0.10, -0.10],
+        "goal": [0.40, 0.40],
+        "goalType": "GoalState",
+        "collisionCheckResolution": 0.000005,
+        "numObstacles": 10,
+        "maxSideLength": 0.20,
+        "minSideLength": 0.10,
+        "maxTime": 5.0
+      }
+    }
+  }
+  
