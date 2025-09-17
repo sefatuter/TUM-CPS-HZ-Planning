@@ -1,0 +1,294 @@
+{
+  "context": {
+    "defaultNarrowPassage2D": {
+      "boundarySideLengths": [
+        1.0,
+        1.0
+      ],
+      "collisionCheckResolution": 5e-06,
+      "dimensions": 2,
+      "goal": [
+        0.2,
+        0.0
+      ],
+      "goalType": "GoalState",
+      "maxTime": 0.1,
+      "objective": "defaultPathLength",
+      "passageOffset": 0.1,
+      "passageWidth": 0.1,
+      "start": [
+        -0.2,
+        0.0
+      ],
+      "type": "NarrowPassage",
+      "wallOffset": 0.0,
+      "wallThickness": 0.2
+    }
+  },
+  "experiment": {
+    "baseDirectory": "/home/ubuntu/Desktop/hzmp_project/pdt/build/benchmarks/",
+    "context": "defaultNarrowPassage2D",
+    "executable": "benchmark",
+    "experimentDirectory": "/home/ubuntu/Desktop/hzmp_project/pdt/build/benchmarks/2025-09-16_12-27-08_defaultNarrowPassage2D",
+    "loadDefaultContextConfig": false,
+    "loadDefaultObjectiveConfig": false,
+    "loadDefaultPlannerConfig": false,
+    "loadDefaultReportConfig": true,
+    "logFrequency": 10000.0,
+    "name": "2025-09-16_12-27-08_defaultNarrowPassage2D",
+    "numRuns": 100,
+    "planners": [
+      "defaultInformedHZ",
+      "defaultInformedRRTstar"
+    ],
+    "results": [
+      "/home/ubuntu/Desktop/hzmp_project/pdt/build/benchmarks/2025-09-16_12-27-08_defaultNarrowPassage2D/raw/results_0.csv"
+    ],
+    "seed": 10981397665449740,
+    "version": {
+      "branch": "refs/heads/main",
+      "commit": "8e8a404b90a6327b62cc5846dcdba9802bda9b61",
+      "status": "DIRTY"
+    }
+  },
+  "objective": {
+    "defaultPathLength": {
+      "solvedCost": 0.0,
+      "type": "PathLength"
+    }
+  },
+  "planner": {
+    "defaultInformedHZ": {
+      "isAnytime": true,
+      "options": {
+        "goalBias": 0.05,
+        "maxEdgeLength": {
+          "2d": 0.1
+        },
+        "numSamplingAttempts": 100,
+        "rewireFactor": 1.1,
+        "useKNearest": true
+      },
+      "report": {
+        "color": "pdtblue",
+        "name": "Informed HZ"
+      },
+      "type": "InformedHZ"
+    },
+    "defaultInformedRRTstar": {
+      "isAnytime": true,
+      "options": {
+        "goalBias": 0.05,
+        "maxEdgeLength": {
+          "2d": 0.3
+        },
+        "numSamplingAttempts": 1,
+        "rewireFactor": 1.001,
+        "useKNearest": false
+      },
+      "report": {
+        "color": "pdtpurple",
+        "name": "Informed RRT*"
+      },
+      "type": "InformedRRTstar"
+    }
+  },
+  "report": {
+    "automaticCompilation": true,
+    "colors": {
+      "pdtblack": [
+        0,
+        0,
+        0
+      ],
+      "pdtblue": [
+        11,
+        93,
+        174
+      ],
+      "pdtdarkblue": [
+        6,
+        26,
+        64
+      ],
+      "pdtdarkgreen": [
+        49,
+        92,
+        43
+      ],
+      "pdtdarkpurple": [
+        50,
+        14,
+        59
+      ],
+      "pdtdarkred": [
+        61,
+        19,
+        8
+      ],
+      "pdtgray": [
+        120,
+        120,
+        120
+      ],
+      "pdtgreen": [
+        100,
+        161,
+        27
+      ],
+      "pdtlightblue": [
+        59,
+        175,
+        236
+      ],
+      "pdtlightgreen": [
+        149,
+        198,
+        35
+      ],
+      "pdtlightpurple": [
+        197,
+        137,
+        232
+      ],
+      "pdtlightred": [
+        206,
+        62,
+        21
+      ],
+      "pdtpurple": [
+        106,
+        20,
+        125
+      ],
+      "pdtred": [
+        145,
+        0,
+        33
+      ],
+      "pdtwhite": [
+        255,
+        255,
+        255
+      ],
+      "pdtyellow": [
+        232,
+        163,
+        26
+      ]
+    },
+    "costPercentileEvolutionPlots": {
+      "axisHeight": "0.3\\textwidth",
+      "axisWidth": "\\textwidth",
+      "xlog": true,
+      "xmajorgrids": true,
+      "xminorgrids": true,
+      "ymajorgrids": true,
+      "yminorgrids": false
+    },
+    "initialSolutionPlots": {
+      "axisHeight": "0.3\\textwidth",
+      "axisWidth": "\\textwidth",
+      "xlog": true,
+      "xmajorgrids": true,
+      "xminorgrids": true,
+      "ymajorgrids": true,
+      "yminorgrids": false
+    },
+    "initialSolutionScatterPlots": {
+      "axisHeight": "0.3\\textwidth",
+      "axisWidth": "\\textwidth",
+      "markSize": 2.0,
+      "xlog": true,
+      "xmajorgrids": true,
+      "xminorgrids": true,
+      "ymajorgrids": true,
+      "yminorgrids": false
+    },
+    "medianCostPlots": {
+      "axisHeight": "0.3\\textwidth",
+      "axisWidth": "\\textwidth",
+      "confidence": 0.99,
+      "confidenceIntervalDrawOpacity": 0.10000000149011612,
+      "confidenceIntervalFillOpacity": 0.20000000298023224,
+      "confidenceIntervalLineWidth": 0.5,
+      "lineWidth": 1.5,
+      "plotConfidenceIntervalInAllPlots": true,
+      "xlog": true,
+      "xmajorgrids": true,
+      "xminorgrids": true,
+      "ymajorgrids": true,
+      "yminorgrids": false
+    },
+    "medianInitialSolutionPlots": {
+      "axisHeight": "0.3\\textwidth",
+      "axisWidth": "\\textwidth",
+      "confidence": 0.99,
+      "lineWidth": 0.5,
+      "markSize": 0.5,
+      "xlog": true,
+      "xmajorgrids": true,
+      "xminorgrids": true,
+      "ymajorgrids": true,
+      "yminorgrids": false
+    },
+    "successPlots": {
+      "axisHeight": "0.3\\textwidth",
+      "axisWidth": "\\textwidth",
+      "confidence": 0.99,
+      "confidenceIntervalDrawOpacity": 0.10000000149011612,
+      "confidenceIntervalFillOpacity": 0.20000000298023224,
+      "confidenceIntervalLineWidth": 0.5,
+      "lineWidth": 1.5,
+      "plotConfidenceIntervalInAllPlots": true,
+      "xlog": true,
+      "xmajorgrids": true,
+      "xminorgrids": true,
+      "ymajorgrids": true,
+      "yminorgrids": false,
+      "ytick": "0,25,50,75,100"
+    },
+    "verboseCompilation": false
+  },
+  "statistics": {
+    "initialSolutions": {
+      "numDurationBins": 100
+    },
+    "percentiles": {
+      "sampleSize": {
+        "100": {
+          "populationPercentile": {
+            "0.01": {
+              "orderedIndex": 1
+            },
+            "0.05": {
+              "orderedIndex": 5
+            },
+            "0.25": {
+              "orderedIndex": 25
+            },
+            "0.50": {
+              "confidenceInterval": {
+                "0.99": {
+                  "confidence": 0.9906649518793552,
+                  "lowerOrderedIndex": 37,
+                  "upperOrderedIndex": 63
+                }
+              },
+              "orderedIndex": 50
+            },
+            "0.75": {
+              "orderedIndex": 75
+            },
+            "0.95": {
+              "orderedIndex": 95
+            },
+            "0.99": {
+              "orderedIndex": 99
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,255 @@
+\RequirePackage{luatex85}
+\RequirePackage{shellesc}
+\documentclass[titlepage]{article}
+% This report uses the following packages:
+\usepackage{appendix}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{microtype}
+\usepackage{pgfplots}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{xcolor}
+% This report uses the following TikZ libraries:
+\usetikzlibrary{calc}
+\usetikzlibrary{external}
+\usetikzlibrary{plotmarks}
+\immediate\write18{mkdir -p tikz-externalized}
+\tikzexternalize[prefix=tikz-externalized/]
+\tikzset{external/system call/.add={}{; convert -density 600 -flatten "\image.pdf" "\image-600.png"}}
+% This report uses the following PGFPlots libraries:
+\usepgfplotslibrary{fillbetween}
+% This report sets the following listings options:
+% This report sets the following PGFPlots options:
+\pgfplotsset{compat=1.15}
+\lstdefinelanguage{json}{%
+basicstyle={\normalfont\ttfamily},%
+stringstyle=\color{black!90},%
+numbers=left,%
+numberstyle=\scriptsize,%
+stepnumber=1,%
+numbersep=8pt,%
+showstringspaces=false,%
+breaklines=true,%
+backgroundcolor=\color{gray!10},%
+string=[s]{"}{"},%
+comment=[l]{:\ "},%
+morecomment=[l]{:"},%
+literate=%
+  *{0}{{{\color{black!70}0}}}{1}%
+  {1}{{{\color{black!70}1}}}{1}%
+  {2}{{{\color{black!70}2}}}{1}%
+  {3}{{{\color{black!70}3}}}{1}%
+  {4}{{{\color{black!70}4}}}{1}%
+  {5}{{{\color{black!70}5}}}{1}%
+  {6}{{{\color{black!70}6}}}{1}%
+  {7}{{{\color{black!70}7}}}{1}%
+  {8}{{{\color{black!70}8}}}{1}%
+  {9}{{{\color{black!70}9}}}{1}}%
+\lstset{language=json}
+\definecolor{pdtblack}{RGB}{0,0,0}
+\definecolor{pdtblue}{RGB}{11,93,174}
+\definecolor{pdtdarkblue}{RGB}{6,26,64}
+\definecolor{pdtdarkgreen}{RGB}{49,92,43}
+\definecolor{pdtdarkpurple}{RGB}{50,14,59}
+\definecolor{pdtdarkred}{RGB}{61,19,8}
+\definecolor{pdtgray}{RGB}{120,120,120}
+\definecolor{pdtgreen}{RGB}{100,161,27}
+\definecolor{pdtlightblue}{RGB}{59,175,236}
+\definecolor{pdtlightgreen}{RGB}{149,198,35}
+\definecolor{pdtlightpurple}{RGB}{197,137,232}
+\definecolor{pdtlightred}{RGB}{206,62,21}
+\definecolor{pdtpurple}{RGB}{106,20,125}
+\definecolor{pdtred}{RGB}{145,0,33}
+\definecolor{pdtwhite}{RGB}{255,255,255}
+\definecolor{pdtyellow}{RGB}{232,163,26}
+\title{\bfseries\LARGE Experiment \\ \texttt{2025-09-16\_11-54-47\_defaultWallGap2D}}
+\author{Planner Developer Tools (PDT)}
+\date{\today}
+
+\begin{document}
+\maketitle
+\section{Overview}\label{sec:overview}
+
+This report was automatically generated using Planner Developer Tools (PDT). It presents the results for the \texttt{2025-09-16\_11-54-47\_defaultWallGap2D} experiment, which executed 100 runs of Informed RRT*, AIT*,  and EIT* on the \texttt{defaultWallGap2D} planning context. See appendix~\ref{sec:experiment-configuration} for more information about the experiment setup.
+\subsection{Results Summary}\label{sec:overview-results-summary}
+{\tiny
+\setlength{\tabcolsep}{0.8em}
+\begin{tabularx}{\textwidth}[c]{Xcccccccccc}\toprule
+Planner & \(t_\mathrm{init}^\mathrm{min}\) & \(t_\mathrm{init}^\mathrm{med}\) & \(t_\mathrm{init}^\mathrm{max}\) & \(c_\mathrm{init}^\mathrm{min}\) & \(c_\mathrm{init}^\mathrm{med}\) & \(c_\mathrm{init}^\mathrm{max}\) & \(c_\mathrm{final}^\mathrm{min}\) & \(c_\mathrm{final}^\mathrm{med}\) & \(c_\mathrm{final}^\mathrm{max}\) & Success \\[0.5em]\midrule
+Informed RRT*& 0.0186 & 0.0614 & \infty & 0.6458 & 1.1977 & \infty & 0.6385 & 1.0941 & \infty & 0.84 \\[0.5em]
+AIT*& \bfseries 0.0057 & 0.0138 & 0.0640 & \bfseries 0.6343 & 0.9919 & \bfseries 1.1989 & \bfseries 0.6324 & 0.6356 & \bfseries 0.6477 & \bfseries 1.00 \\[0.5em]
+EIT*& 0.0059 & \bfseries 0.0093 & \bfseries 0.0158 & 0.6385 & \bfseries 0.9917 & 1.3188 & 0.6325 & \bfseries 0.6347 & 0.9661 & \bfseries 1.00 \\[0.5em]
+\bottomrule
+\end{tabularx}
+}
+\begin{center}
+\input{/home/ubuntu/Desktop/hzmp_project/pdt/build/benchmarks/2025-09-16_11-54-47_defaultWallGap2D/tikz/SuccessAxis_AllPlannersMedianCostAxis__.tikz}
+\captionof{figure}{\footnotesize \textbf{Top:} Percentage of runs that found a solution at any given time with a Clopper-Pearson (nonparametric) 99\% confidence interval. \textbf{Bottom:} Median cost evolution and median of initial solution with nonparametric 99\% confidence intervals.}
+\end{center}
+\pagebreak
+\subsection{Initial Solutions}\label{sec:overview-initial-solutions}
+\begin{center}
+\input{/home/ubuntu/Desktop/hzmp_project/pdt/build/benchmarks/2025-09-16_11-54-47_defaultWallGap2D/tikz/axes_collection_0.tikz}
+\captionof{figure}{\footnotesize Histograms of initial solution times.}
+\end{center}
+\pagebreak
+\section{Informed RRT*}\label{sec:defaultInformedRRTstar}
+\subsection{Initial Solutions}\label{sec:defaultInformedRRTstar-initial-solution}
+\begin{center}
+\input{/home/ubuntu/Desktop/hzmp_project/pdt/build/benchmarks/2025-09-16_11-54-47_defaultWallGap2D/tikz/SuccessAxis_defaultInformedRRTstarISDPA_defaultInformedRRTstarInitialSolutionScatterAxis_.tikz}
+\captionof{figure}{\footnotesize \textbf{Top:} Histogram and associated empirical distribution function (EDF) of Informed RRT* with a Clopper-Pearson (nonparametric) 99\% confidence interval for the underlying CDF. \textbf{Bottom:} All initial solutions of Informed RRT* and their median with a nonparametric 99\% confidence interval.}
+\end{center}
+\subsection{Cost Evolution}\label{sec:defaultInformedRRTstar-cost-evolution}
+\begin{center}
+\input{/home/ubuntu/Desktop/hzmp_project/pdt/build/benchmarks/2025-09-16_11-54-47_defaultWallGap2D/tikz/defaultInformedRRTstarMedianCostAxis_defaultInformedRRTstarCostPercentileEvolutionAxis_.tikz}
+\captionof{figure}{\footnotesize \textbf{Top:} Median cost evolution of Informed RRT* with a nonparametric 99\% confidence interval. \textbf{Bottom:} Seven percentiles of the cost evolution of Informed RRT*.}\end{center}
+
+\pagebreak
+\section{AIT*}\label{sec:defaultAITstar}
+\subsection{Initial Solutions}\label{sec:defaultAITstar-initial-solution}
+\begin{center}
+\input{/home/ubuntu/Desktop/hzmp_project/pdt/build/benchmarks/2025-09-16_11-54-47_defaultWallGap2D/tikz/SuccessAxis_defaultAITstarISDPA_defaultAITstarInitialSolutionScatterAxis_.tikz}
+\captionof{figure}{\footnotesize \textbf{Top:} Histogram and associated empirical distribution function (EDF) of AIT* with a Clopper-Pearson (nonparametric) 99\% confidence interval for the underlying CDF. \textbf{Bottom:} All initial solutions of AIT* and their median with a nonparametric 99\% confidence interval.}
+\end{center}
+\subsection{Cost Evolution}\label{sec:defaultAITstar-cost-evolution}
+\begin{center}
+\input{/home/ubuntu/Desktop/hzmp_project/pdt/build/benchmarks/2025-09-16_11-54-47_defaultWallGap2D/tikz/defaultAITstarMedianCostAxis_defaultAITstarCostPercentileEvolutionAxis_.tikz}
+\captionof{figure}{\footnotesize \textbf{Top:} Median cost evolution of AIT* with a nonparametric 99\% confidence interval. \textbf{Bottom:} Seven percentiles of the cost evolution of AIT*.}\end{center}
+
+\pagebreak
+\section{EIT*}\label{sec:defaultEITstar}
+\subsection{Initial Solutions}\label{sec:defaultEITstar-initial-solution}
+\begin{center}
+\input{/home/ubuntu/Desktop/hzmp_project/pdt/build/benchmarks/2025-09-16_11-54-47_defaultWallGap2D/tikz/SuccessAxis_defaultEITstarISDPA_defaultEITstarInitialSolutionScatterAxis_.tikz}
+\captionof{figure}{\footnotesize \textbf{Top:} Histogram and associated empirical distribution function (EDF) of EIT* with a Clopper-Pearson (nonparametric) 99\% confidence interval for the underlying CDF. \textbf{Bottom:} All initial solutions of EIT* and their median with a nonparametric 99\% confidence interval.}
+\end{center}
+\subsection{Cost Evolution}\label{sec:defaultEITstar-cost-evolution}
+\begin{center}
+\input{/home/ubuntu/Desktop/hzmp_project/pdt/build/benchmarks/2025-09-16_11-54-47_defaultWallGap2D/tikz/defaultEITstarMedianCostAxis_defaultEITstarCostPercentileEvolutionAxis_.tikz}
+\captionof{figure}{\footnotesize \textbf{Top:} Median cost evolution of EIT* with a nonparametric 99\% confidence interval. \textbf{Bottom:} Seven percentiles of the cost evolution of EIT*.}\end{center}
+
+\pagebreak
+\begin{appendices}
+\section{Configuration}\label{sec:configuration}
+\subsection{Experiment}\label{sec:experiment-configuration}
+\begin{lstlisting}
+{
+  "baseDirectory": "/home/ubuntu/Desktop/hzmp_project/pdt/build/benchmarks/",
+  "context": "defaultWallGap2D",
+  "executable": "benchmark",
+  "experimentDirectory": "/home/ubuntu/Desktop/hzmp_project/pdt/build/benchmarks/2025-09-16_11-54-47_defaultWallGap2D",
+  "loadDefaultContextConfig": true,
+  "loadDefaultObjectiveConfig": true,
+  "loadDefaultPlannerConfig": true,
+  "loadDefaultReportConfig": true,
+  "logFrequency": 10000,
+  "name": "2025-09-16_11-54-47_defaultWallGap2D",
+  "numRuns": 100,
+  "planners": [
+    "defaultInformedRRTstar",
+    "defaultAITstar",
+    "defaultEITstar"
+  ],
+  "results": [
+    "/home/ubuntu/Desktop/hzmp_project/pdt/build/benchmarks/2025-09-16_11-54-47_defaultWallGap2D/raw/results_0.csv"
+  ],
+  "seed": 10981395723979876,
+  "useOnlyThisConfig": true
+}\end{lstlisting}
+\subsection{defaultWallGap2D}\label{sec:context-configuration}
+\begin{lstlisting}
+{
+  "boundarySideLengths": [
+    1,
+    1
+  ],
+  "collisionCheckResolution": 5e-06,
+  "dimensions": 2,
+  "gapOffset": 0.1,
+  "gapWidth": 0.04,
+  "goal": [
+    0.3,
+    0.0
+  ],
+  "goalType": "GoalState",
+  "maxTime": 0.1,
+  "objective": "defaultPathLength",
+  "start": [
+    -0.3,
+    0.0
+  ],
+  "type": "WallGap",
+  "wallThickness": 0.2,
+  "wallWidth": 0.8
+}\end{lstlisting}
+\subsection{Informed RRT*}\label{sec:defaultInformedRRTstar-configuration}
+\begin{lstlisting}
+{
+  "isAnytime": true,
+  "options": {
+    "goalBias": 0.05,
+    "maxEdgeLength": {
+      "12d": 2.0,
+      "14d": 2.4,
+      "16d": 3.0,
+      "2d": 0.3,
+      "32d": 7.0,
+      "3d": 0.4,
+      "4d": 0.5,
+      "6d": 0.9,
+      "8d": 1.25
+    },
+    "numSamplingAttempts": 1,
+    "rewireFactor": 1.001,
+    "useKNearest": false
+  },
+  "report": {
+    "color": "pdtpurple",
+    "name": "Informed RRT*"
+  },
+  "type": "InformedRRTstar"
+}\end{lstlisting}
+\subsection{AIT*}\label{sec:defaultAITstar-configuration}
+\begin{lstlisting}
+{
+  "isAnytime": true,
+  "options": {
+    "batchSize": 100,
+    "enablePruning": true,
+    "repairBackwardSearch": true,
+    "rewireFactor": 1.001,
+    "trackApproximateSolutions": false,
+    "useKNearest": true
+  },
+  "report": {
+    "color": "pdtlightgreen",
+    "name": "AIT*"
+  },
+  "type": "AITstar"
+}\end{lstlisting}
+\subsection{EIT*}\label{sec:defaultEITstar-configuration}
+\begin{lstlisting}
+{
+  "isAnytime": true,
+  "options": {
+    "batchSize": 100,
+    "collisionDetectionOnReverseSearch": true,
+    "enablePruning": true,
+    "numInitialCollisionChecks": 1,
+    "radiusFactor": 1.001,
+    "repairFactor": 1.2,
+    "repairReverseSearchTreeUponCollisionDetection": false,
+    "resetSuboptimalityFactorOnEveryApproximation": false,
+    "trackApproximateSolutions": false,
+    "useKNearest": true
+  },
+  "report": {
+    "color": "pdtgreen",
+    "name": "EIT*"
+  },
+  "type": "EITstar"
+}\end{lstlisting}
+\end{appendices}
+\end{document}

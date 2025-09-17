@@ -1,0 +1,469 @@
+\begin{tikzpicture} [
+  xscale=1,
+  yscale=1
+]
+\begin{axis} [
+  width=\textwidth,
+  height=0.3\textwidth,
+  at={(0cm, 0cm)},
+  unbounded coords=jump,
+  xtick align=inside,
+  ytick align=inside,
+  axis line style={solid, black},
+  name=defaultInformedRRTstarISDPA,
+  xmajorgrids,
+  xminorgrids,
+  ymajorgrids,
+  major grid style={densely dotted, black!20},
+  minor grid style={densely dotted, black!20},
+  ymin=0,
+  ymax=11,
+  enlarge y limits=upper,
+  xmode=log,
+  xlabel={{\empty}},
+  xlabel style={font=\footnotesize},
+  xticklabel={{\empty}},
+  xticklabel style={font=\footnotesize},
+  ylabel={Counts},
+  ylabel style={font=\footnotesize, text depth=0.0em, text height=0.5em},
+  ylabel absolute,
+  yticklabel style={font=\footnotesize}
+]
+\addplot [
+  line width=0,
+  color=pdtpurple,
+  mark="none",
+  const plot,
+  name path={defaultInformedRRTstarInitialSolutionDurationHistogram},
+  fill=pdtpurple
+] table [
+  row sep=\\,
+  col sep=&
+]{
+0.00570601 & 0\\
+0.00570601 & 0\\
+0.00587252 & 0\\
+0.0060439 & 0\\
+0.00622027 & 0\\
+0.00640179 & 0\\
+0.00658861 & 0\\
+0.00678089 & 0\\
+0.00697877 & 0\\
+0.00718243 & 0\\
+0.00739203 & 0\\
+0.00760774 & 0\\
+0.00782975 & 0\\
+0.00805825 & 0\\
+0.0082934 & 0\\
+0.00853543 & 0\\
+0.00878451 & 0\\
+0.00904086 & 0\\
+0.0093047 & 0\\
+0.00957623 & 0\\
+0.00985569 & 0\\
+0.0101433 & 0\\
+0.0104393 & 0\\
+0.0107439 & 0\\
+0.0110575 & 0\\
+0.0113802 & 0\\
+0.0117123 & 0\\
+0.0120541 & 0\\
+0.0124058 & 0\\
+0.0127679 & 0\\
+0.0131405 & 0\\
+0.0135239 & 0\\
+0.0139186 & 0\\
+0.0143248 & 0\\
+0.0147428 & 0\\
+0.015173 & 0\\
+0.0156158 & 0\\
+0.0160715 & 0\\
+0.0165405 & 0\\
+0.0170232 & 0\\
+0.01752 & 0\\
+0.0180313 & 0\\
+0.0185575 & 2\\
+0.019099 & 0\\
+0.0196564 & 0\\
+0.02023 & 0\\
+0.0208203 & 0\\
+0.0214279 & 0\\
+0.0220532 & 1\\
+0.0226968 & 1\\
+0.0233592 & 1\\
+0.0240408 & 1\\
+0.0247424 & 1\\
+0.0254644 & 1\\
+0.0262076 & 1\\
+0.0269724 & 0\\
+0.0277595 & 0\\
+0.0285696 & 2\\
+0.0294033 & 0\\
+0.0302613 & 1\\
+0.0311444 & 2\\
+0.0320533 & 0\\
+0.0329887 & 1\\
+0.0339514 & 1\\
+0.0349422 & 1\\
+0.0359619 & 3\\
+0.0370113 & 1\\
+0.0380914 & 0\\
+0.039203 & 0\\
+0.040347 & 1\\
+0.0415245 & 3\\
+0.0427362 & 0\\
+0.0439834 & 3\\
+0.0452669 & 5\\
+0.0465879 & 3\\
+0.0479475 & 2\\
+0.0493467 & 0\\
+0.0507867 & 2\\
+0.0522688 & 2\\
+0.0537941 & 2\\
+0.055364 & 0\\
+0.0569796 & 3\\
+0.0586424 & 2\\
+0.0603538 & 3\\
+0.062115 & 3\\
+0.0639277 & 4\\
+0.0657933 & 2\\
+0.0677133 & 1\\
+0.0696893 & 2\\
+0.071723 & 3\\
+0.073816 & 3\\
+0.0759702 & 3\\
+0.0781872 & 1\\
+0.0804688 & 0\\
+0.0828171 & 0\\
+0.0852339 & 3\\
+0.0877213 & 1\\
+0.0902812 & 1\\
+0.0929158 & 2\\
+0.0956273 & 2\\
+0.0984179 & 0\\
+0.0984179 & 0\\
+};
+
+\end{axis}
+
+\begin{axis} [
+  width=\textwidth,
+  height=0.3\textwidth,
+  at={($(defaultInformedRRTstarISDPA.south) - (0.0em, 0.6em)$)},
+  unbounded coords=jump,
+  xtick align=inside,
+  ytick align=inside,
+  axis line style={solid, black},
+  name=defaultAITstarISDPA,
+  anchor=north,
+  xmajorgrids,
+  xminorgrids,
+  ymajorgrids,
+  major grid style={densely dotted, black!20},
+  minor grid style={densely dotted, black!20},
+  ymin=0,
+  ymax=11,
+  enlarge y limits=upper,
+  xmode=log,
+  xlabel={{\empty}},
+  xlabel style={font=\footnotesize},
+  xticklabel={{\empty}},
+  xticklabel style={font=\footnotesize},
+  ylabel={Counts},
+  ylabel style={font=\footnotesize, text depth=0.0em, text height=0.5em},
+  ylabel absolute,
+  yticklabel style={font=\footnotesize}
+]
+\addplot [
+  line width=0,
+  color=pdtlightgreen,
+  mark="none",
+  const plot,
+  name path={defaultAITstarInitialSolutionDurationHistogram},
+  fill=pdtlightgreen
+] table [
+  row sep=\\,
+  col sep=&
+]{
+0.00570601 & 0\\
+0.00570601 & 6\\
+0.00587252 & 3\\
+0.0060439 & 1\\
+0.00622027 & 2\\
+0.00640179 & 0\\
+0.00658861 & 1\\
+0.00678089 & 1\\
+0.00697877 & 1\\
+0.00718243 & 5\\
+0.00739203 & 1\\
+0.00760774 & 2\\
+0.00782975 & 2\\
+0.00805825 & 2\\
+0.0082934 & 3\\
+0.00853543 & 3\\
+0.00878451 & 1\\
+0.00904086 & 1\\
+0.0093047 & 0\\
+0.00957623 & 0\\
+0.00985569 & 1\\
+0.0101433 & 1\\
+0.0104393 & 2\\
+0.0107439 & 2\\
+0.0110575 & 2\\
+0.0113802 & 1\\
+0.0117123 & 2\\
+0.0120541 & 0\\
+0.0124058 & 3\\
+0.0127679 & 0\\
+0.0131405 & 1\\
+0.0135239 & 3\\
+0.0139186 & 0\\
+0.0143248 & 1\\
+0.0147428 & 2\\
+0.015173 & 2\\
+0.0156158 & 1\\
+0.0160715 & 4\\
+0.0165405 & 0\\
+0.0170232 & 5\\
+0.01752 & 4\\
+0.0180313 & 2\\
+0.0185575 & 2\\
+0.019099 & 3\\
+0.0196564 & 2\\
+0.02023 & 4\\
+0.0208203 & 3\\
+0.0214279 & 2\\
+0.0220532 & 1\\
+0.0226968 & 2\\
+0.0233592 & 2\\
+0.0240408 & 1\\
+0.0247424 & 1\\
+0.0254644 & 1\\
+0.0262076 & 0\\
+0.0269724 & 0\\
+0.0277595 & 0\\
+0.0285696 & 1\\
+0.0294033 & 0\\
+0.0302613 & 0\\
+0.0311444 & 0\\
+0.0320533 & 0\\
+0.0329887 & 0\\
+0.0339514 & 0\\
+0.0349422 & 0\\
+0.0359619 & 0\\
+0.0370113 & 0\\
+0.0380914 & 0\\
+0.039203 & 0\\
+0.040347 & 0\\
+0.0415245 & 0\\
+0.0427362 & 0\\
+0.0439834 & 0\\
+0.0452669 & 0\\
+0.0465879 & 0\\
+0.0479475 & 0\\
+0.0493467 & 0\\
+0.0507867 & 0\\
+0.0522688 & 0\\
+0.0537941 & 0\\
+0.055364 & 0\\
+0.0569796 & 0\\
+0.0586424 & 0\\
+0.0603538 & 0\\
+0.062115 & 0\\
+0.0639277 & 1\\
+0.0657933 & 0\\
+0.0677133 & 0\\
+0.0696893 & 0\\
+0.071723 & 0\\
+0.073816 & 0\\
+0.0759702 & 0\\
+0.0781872 & 0\\
+0.0804688 & 0\\
+0.0828171 & 0\\
+0.0852339 & 0\\
+0.0877213 & 0\\
+0.0902812 & 0\\
+0.0929158 & 0\\
+0.0956273 & 0\\
+0.0984179 & 0\\
+0.0984179 & 0\\
+};
+
+\end{axis}
+
+\begin{axis} [
+  width=\textwidth,
+  height=0.3\textwidth,
+  at={($(defaultAITstarISDPA.south) - (0.0em, 0.6em)$)},
+  unbounded coords=jump,
+  xtick align=inside,
+  ytick align=inside,
+  axis line style={solid, black},
+  name=defaultEITstarISDPA,
+  anchor=north,
+  xmajorgrids,
+  xminorgrids,
+  ymajorgrids,
+  major grid style={densely dotted, black!20},
+  minor grid style={densely dotted, black!20},
+  ymin=0,
+  ymax=11,
+  enlarge y limits=upper,
+  xmode=log,
+  xlabel={Computation time [s]},
+  xlabel style={font=\footnotesize},
+  xticklabel style={font=\footnotesize},
+  ylabel={Counts},
+  ylabel style={font=\footnotesize, text depth=0.0em, text height=0.5em},
+  ylabel absolute,
+  yticklabel style={font=\footnotesize}
+]
+\addplot [
+  line width=0,
+  color=pdtgreen,
+  mark="none",
+  const plot,
+  name path={defaultEITstarInitialSolutionDurationHistogram},
+  fill=pdtgreen
+] table [
+  row sep=\\,
+  col sep=&
+]{
+0.00570601 & 0\\
+0.00570601 & 0\\
+0.00587252 & 11\\
+0.0060439 & 6\\
+0.00622027 & 7\\
+0.00640179 & 4\\
+0.00658861 & 3\\
+0.00678089 & 3\\
+0.00697877 & 1\\
+0.00718243 & 3\\
+0.00739203 & 3\\
+0.00760774 & 1\\
+0.00782975 & 0\\
+0.00805825 & 1\\
+0.0082934 & 0\\
+0.00853543 & 0\\
+0.00878451 & 2\\
+0.00904086 & 7\\
+0.0093047 & 6\\
+0.00957623 & 7\\
+0.00985569 & 9\\
+0.0101433 & 8\\
+0.0104393 & 2\\
+0.0107439 & 2\\
+0.0110575 & 4\\
+0.0113802 & 3\\
+0.0117123 & 2\\
+0.0120541 & 0\\
+0.0124058 & 3\\
+0.0127679 & 0\\
+0.0131405 & 0\\
+0.0135239 & 0\\
+0.0139186 & 0\\
+0.0143248 & 0\\
+0.0147428 & 1\\
+0.015173 & 0\\
+0.0156158 & 1\\
+0.0160715 & 0\\
+0.0165405 & 0\\
+0.0170232 & 0\\
+0.01752 & 0\\
+0.0180313 & 0\\
+0.0185575 & 0\\
+0.019099 & 0\\
+0.0196564 & 0\\
+0.02023 & 0\\
+0.0208203 & 0\\
+0.0214279 & 0\\
+0.0220532 & 0\\
+0.0226968 & 0\\
+0.0233592 & 0\\
+0.0240408 & 0\\
+0.0247424 & 0\\
+0.0254644 & 0\\
+0.0262076 & 0\\
+0.0269724 & 0\\
+0.0277595 & 0\\
+0.0285696 & 0\\
+0.0294033 & 0\\
+0.0302613 & 0\\
+0.0311444 & 0\\
+0.0320533 & 0\\
+0.0329887 & 0\\
+0.0339514 & 0\\
+0.0349422 & 0\\
+0.0359619 & 0\\
+0.0370113 & 0\\
+0.0380914 & 0\\
+0.039203 & 0\\
+0.040347 & 0\\
+0.0415245 & 0\\
+0.0427362 & 0\\
+0.0439834 & 0\\
+0.0452669 & 0\\
+0.0465879 & 0\\
+0.0479475 & 0\\
+0.0493467 & 0\\
+0.0507867 & 0\\
+0.0522688 & 0\\
+0.0537941 & 0\\
+0.055364 & 0\\
+0.0569796 & 0\\
+0.0586424 & 0\\
+0.0603538 & 0\\
+0.062115 & 0\\
+0.0639277 & 0\\
+0.0657933 & 0\\
+0.0677133 & 0\\
+0.0696893 & 0\\
+0.071723 & 0\\
+0.073816 & 0\\
+0.0759702 & 0\\
+0.0781872 & 0\\
+0.0804688 & 0\\
+0.0828171 & 0\\
+0.0852339 & 0\\
+0.0877213 & 0\\
+0.0902812 & 0\\
+0.0929158 & 0\\
+0.0956273 & 0\\
+0.0984179 & 0\\
+0.0984179 & 0\\
+};
+
+\end{axis}
+
+\begin{axis} [
+  width=\textwidth,
+  height=0.5\textwidth,
+  at={($(defaultEITstarISDPA.south) - (0.0em, 0.6em)$)},
+  unbounded coords=jump,
+  xtick align=inside,
+  ytick align=inside,
+  axis line style={solid, black},
+  anchor=north,
+  hide axis,
+  xmajorgrids,
+  ymajorgrids,
+  major grid style={densely dotted, black!20},
+  xmin=0,
+  xmax=10,
+  ymin=0,
+  ymax=10,
+  xlabel style={font=\footnotesize},
+  xticklabel style={font=\footnotesize},
+  ylabel style={font=\footnotesize},
+  yticklabel style={font=\footnotesize},
+  legend style={anchor=south, legend cell align=left, legend columns=-1, at={(axis cs:5, 6)}}
+]
+\addlegendimage{pdtpurple, line width = 1.0pt, mark size=1.0pt, mark=square*}
+\addlegendentry{Informed RRT*}
+\addlegendimage{pdtlightgreen, line width = 1.0pt, mark size=1.0pt, mark=square*}
+\addlegendentry{AIT*}
+\addlegendimage{pdtgreen, line width = 1.0pt, mark size=1.0pt, mark=square*}
+\addlegendentry{EIT*}
+\end{axis}
+
+\end{tikzpicture}%

@@ -1,0 +1,9 @@
+# Experiment: 2025-09-16_11-54-47_defaultWallGap2D
+# Planner: defaultInformedRRTstar
+# Statistic: Median initial solution with 0.990000% confidence bounds
+median initial solution duration,0.0613785329999999990092
+lower initial solution duration confidence bound,0.0488638779999999994796
+upper initial solution duration confidence bound,0.0705029669999999997199
+median initial solution cost,1.19773372706110747821
+lower initial solution cost confidence bound,1.12439075047184289247
+upper initial solution cost confidence bound,1.23506318714039187157
