@@ -2,6 +2,9 @@
 
 A minimal setup guide to add the InformedHZ planner to OMPL, integrate it with PDT
 
+Work in Progress: This setup is not fully functional yet. The files and instructions below are part of an ongoing integration effort to add the InformedHZ planner to OMPL and connect it with PDT.
+Some components may be incomplete or require debugging and manual adjustments.
+
 ## OMPL Installation
 
 Use the official OMPL repository to install/build OMPL. You’ll add the InformedHZ planner into this tree in later steps.
